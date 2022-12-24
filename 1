@@ -1,49 +1,36 @@
-package Zachet;
+package masha;
 
+import com.company.Table;
 
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Scanner;
 
-//        Официант выбирает свободный столик из списка, добавляет заказ (блюда из меню),
-//        заказ может добавляться несколько раз на один столик, и может рассчитать столик
-//        (вывод суммы заказов и список блюд на столик, столик изменяет статус на свободен)
-public class Table {
-    static ArrayList<String> dishes = new ArrayList();
-    private int price = 0;
-    private int table_num = 0;
-    private boolean isFree;
+public class Main {
 
-    public Table() {
-        ++this.table_num;
-    }
+    static ArrayList<Table> tables;
+    static Scanner input;
+    static String addTable = "Добавить";
+    static String addOrder = "Заказ";
+    static String addrelease = "Рассчитать";
 
-    public int getTableNum() {
-        return table_num;
-    }
+    public static void main(String[] args) {
+        Table table1 = new Table("1",true);
+        Table table2 = new Table("2",true);
+        Table table3 = new Table("3",true);
+        Table table4 = new Table("4",true);
+        Table table5 = new Table("5",true);
+        tables.add(table1);
+        tables.add(table2);
+        tables.add(table3);
+        tables.add(table4);
+        tables.add(table5);
 
-    public void setisFree(boolean isFree) {
-        this.isFree = isFree;
-    }
+        String command = input.nextLine();
+        System.out.println("Вы можете: добавить, заказ, рассчитать");
+        if (command.equals(addTable.toLowerCase())){
+            System.out.println("Введите номер столика");
+            String tableNumber = input.nextLine();
 
-    public boolean getisFree() {
-        return isFree;
-    }
-    public void add_food(){
-        setisFree(false);
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Сколько позиций содержит заказ?");
-        int n = Integer.parseInt(sc.nextLine());
-        for(int i=0; i<n; i++){
-            System.out.print("Введите продукт");
-            String dish = sc.nextLine();
-            dishes.add(dish);
-            System.out.print("Введите цену позиции?");
-            int myprice = Integer.parseInt(sc.nextLine());
-            price=price + myprice;
         }
     }
-
-    public void clear(){
-        setisFree(true);
-    }
-}
