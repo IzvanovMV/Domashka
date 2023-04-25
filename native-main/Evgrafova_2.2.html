@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<H1> программа для застолий + Факториал 11 + Фамилия-палиндром 
+</H1>
+</head>
+<body>
+	<meta charset = "utf-8">
+	<script type="text/javascript">
+		// программа для застолий
+		do {
+			alert ('ну ладно, давай ещё по одной');
+		} while (prompt('Введите 0 для выхода') !='0');
+		alert ('Гуд лак');
+		// Факториал 
+		a_2 = prompt ( 'факториал какого числа хотите узнать ...')
+		var a = 0;
+		var a_1 = 1;
+		while (a < a_2){
+			a = a + 1;
+			a_1 = a_1 * a
+		}
+		alert (a_1 + 'ваш факториал, наслаждайтесь');
+
+		// Палиндром 
+		var Surname_1;
+		Surname = prompt( "Введите фамилию");
+		Surname_1 = Surname.split("").reverse().join(""); // разбирает, переворачивает, и склеивает обратно
+		alert ( Surname_1);
+		if (Surname == Surname_1)
+		{
+			alert ( 'ваша фамилия симметрична');
+		} else {
+			alert ('ваша фамилия не симметрична');
+		}
+
+
+	</script>
+</body>
+</html>

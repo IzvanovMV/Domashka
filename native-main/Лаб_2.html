@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var otgadki = 0
+        alert("загадка1. Не огонь,а жжется.")
+        var finish1 = 'Крапива'
+        var answ1 = prompt("Введите ответ: ")
+        if (answ1 == finish1){
+            alert("Верно :)")
+            otgadki += 1
+        }
+        else{
+            alert("Неверно :(")
+        }
+        alert("Загадка 2. Два конца, два кольца,посредине гвоздик.")
+        var finish2 = 'Ножницы'
+        var answ2 = prompt("Введите ответ: ")
+        if (answ2 == finish2){
+            alert("Верно :)")
+            otgadki += 1
+        }
+        else{
+            alert("Неверно :(")
+        }
+        alert("Количество отгадок: " + otgadki)
+
+
+        var i = 0
+        while (i != 10){
+            i +=1
+            alert(i)
+        }
+
+        var j = parseInt(prompt("Угадайте число: "))
+        while (j !=1){
+            alert("Еще по одной?")
+            j = parseInt(prompt("Ведите число: "))
+        }
+        alert("Число угадано ^^")
+
+
+        var n = parseInt(prompt("Ведите число для факториала: "))
+        fact = 1
+        while (n > 1){
+            fact *= n
+            n -= 1
+        }
+        alert("Факториал = "  + fact)
+        
+        var name = prompt("Введите фамилию для проверки на палиндром")
+        function Palindrom (str) {
+            return str == str.split('').reverse().join('');
+        }
+        alert("Является ли Ваша фамилия палиндром? " + Palindrom(name))
+
+        var prost = parseInt(prompt("Ведите конечное число для поиска простых чисел: "))
+        for (var i = 1; i <= prost; i++) {
+        var count = 0
+        for (var j = 1; j <= i; j++) {
+        if (i % j == 0){count++}
+        }
+        if (count <= 2){alert(i)}
+        }
+        
+        alert("Конец ^^")
+    </script>
+</body>
+</html>

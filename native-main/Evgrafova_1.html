@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<H1>"лаба 1"
+</H1>
+</head>
+<body>
+<p> Добрый вечер, </p>
+<meta charset = "utf-8">
+<script>
+var name = prompt("Введите что-нибудь");
+alert(typeof(name));
+alert (name + " - ваше что-нибудь");
+
+var number_1 = prompt("Введите первое число:");
+var number_2 = prompt("Введите второе число:");
+number_1 = Number (number_1);
+number_2 = Number (number_2);
+var sum; //сумма
+sum = number_1 + number_2;
+var raz; //разность
+raz = number_1 - number_2;
+var umn; //умножение
+umn = number_1 * number_2;
+var del; // деление
+del = number_1 / number_2;
+var kv_1; // квадрат первого числа
+kv_1 = number_1 ** 2;
+var kv_2; // квадрат второго числа
+kv_2 = number_2 ** 2;
+alert ("Результат: \n " + "сумма " + sum + "\n разность " + raz + "\n умножение " + umn + "\n деление " + del + "\n квадрат первого числа " + kv_1 + "\n квадрат второго числа " + kv_2)
+
+var name_1 = prompt("Можно ваше имя 7 т-т");
+var date_1 = prompt("А теперь год рождения ... ");
+date_2 = 2021 - Number(date_1)
+var currentTime = new Date();
+document.write( name_1 + ': ' + date_2) 
+</script>
+</body>
+</html>

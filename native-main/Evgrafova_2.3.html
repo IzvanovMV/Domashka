@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<H1> вывести все простые числа до 11
+</H1>
+</head>
+<body>
+	<meta charset = "utf-8">
+	<script type="text/javascript">
+		// Вывод всех простых чисел 
+		var n = 0;
+		var n_1;
+		let arr = [] ;
+		let arr_1 = [] ;
+		while (n < 11){
+			n = n + 1;
+			arr[n] = n;
+			var t = 0;
+			for (var i = 1; i < 12 ; i++){
+				if (Number (arr[n]) % i == 0){
+					t = t + 1
+				}
+				
+			}
+			if (t != 2){
+				arr_1[n]= "-";
+				}else {
+				arr_1[n] = n;
+				}	
+			
+		}
+		arr_1[1]=1
+		alert (arr_1  + " все простые числа от 1 до 11");
+
+	</script>
+</body>
+</html>
